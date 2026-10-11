@@ -25,6 +25,9 @@ jobs:
 
       - run: flutter build web --release --base-href /pet-shop-app/
 
+      - name: Prepare 404 fallback
+        run: cp build/web/index.html build/web/404.html
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
